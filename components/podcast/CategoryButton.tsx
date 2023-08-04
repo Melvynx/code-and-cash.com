@@ -16,7 +16,9 @@ export const CategoryButton = ({
         category === currentCategory ? 'text-blue-500 !bg-white' : 'text-slate-500'
       }`}
       onClick={() => {
-        router.push(`?category=${category}`);
+        const url = new URL(window.location.href);
+        url.searchParams.set('category', category);
+        router.replace(url.toString());
       }}
     >
       {category}

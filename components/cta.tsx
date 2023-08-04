@@ -84,7 +84,7 @@ export default function Cta() {
                 >
                   Apprends à vivre ta passion en tant que
                   <span className="font-permanent-marker text-blue-500 font-normal whitespace-nowrap">
-                    right{' '}
+                    {' '}
                     <span className="inline-flex relative">
                       <svg
                         className="absolute right-0 top-full mt-1 max-w-none -z-10"

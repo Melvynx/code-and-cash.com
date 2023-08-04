@@ -1,15 +1,14 @@
+'use client';
+
 import { allPosts } from 'contentlayer/generated';
+import { useSearchParams } from 'next/navigation';
 import { CategoryButton } from './podcast/CategoryButton';
 import PostItem from './post-item';
 
-export default function Podcasts({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
-}) {
-  const category = String(searchParams.category || 'All');
-  console.log(category);
-  // Sort posts by date
+export default function Podcasts() {
+  const searchParams = useSearchParams();
+  const category = searchParams.get('category') || 'All';
+
   allPosts.sort((a, b) => {
     return new Date(a.publishedAt) > new Date(b.publishedAt) ? -1 : 1;
   });
@@ -26,12 +25,10 @@ export default function Podcasts({
             {/* Filters */}
             <div className="flex flex-wrap -m-1">
               <CategoryButton category="All" currentCategory={category} />
-              <CategoryButton category="Indie Stories" currentCategory={category} />
-              <CategoryButton
-                category="Software Social"
-                currentCategory={category}
-              />
-              <CategoryButton category="Interviews" currentCategory={category} />
+              <CategoryButton category="Creator" currentCategory={category} />
+              <CategoryButton category="SaaS" currentCategory={category} />
+              <CategoryButton category="Startup" currentCategory={category} />
+              <CategoryButton category="Other" currentCategory={category} />
             </div>
           </div>
 
