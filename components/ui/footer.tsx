@@ -59,7 +59,7 @@ export default function Footer() {
               <li>
                 <a
                   className="flex justify-center items-center text-blue-500 hover:text-blue-600 transition duration-150 ease-in-out"
-                  href="mailto:me+podcast@melvynx.com"
+                  href="mailto:contact+podcast@melvynx.com"
                   aria-label="Telegram"
                 >
                   <svg

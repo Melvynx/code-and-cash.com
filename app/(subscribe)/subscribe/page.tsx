@@ -1,10 +1,17 @@
 export const metadata = {
   title: 'Subscribe - Podcast',
   description: 'Page description',
-}
+};
 
-import SubscribeForm from './subscribe-form'
-import Features from '@/components/features'
+import Features from '@/components/features';
+import {
+  SiApplepodcasts,
+  SiDiscord,
+  SiSpotify,
+  SiYoutube,
+} from '@icons-pack/react-simple-icons';
+import Link from 'next/link';
+import SubscribeForm from './subscribe-form';
 
 export default function Subscribe() {
   return (
@@ -22,13 +29,34 @@ export default function Subscribe() {
                 <div className="absolute -top-16 left-1/2 -translate-x-1/3 md:-translate-x-1/2 pointer-events-none -z-10 blur-2xl">
                   <svg xmlns="http://www.w3.org/2000/svg" width="2106" height="1327">
                     <defs>
-                      <filter id="hi-a" width="133.3%" height="131.3%" x="-16.7%" y="-15.6%" filterUnits="objectBoundingBox">
+                      <filter
+                        id="hi-a"
+                        width="133.3%"
+                        height="131.3%"
+                        x="-16.7%"
+                        y="-15.6%"
+                        filterUnits="objectBoundingBox"
+                      >
                         <feGaussianBlur in="SourceGraphic" stdDeviation="0" />
                       </filter>
-                      <filter id="hi-b" width="133.3%" height="131.3%" x="-16.7%" y="-15.6%" filterUnits="objectBoundingBox">
+                      <filter
+                        id="hi-b"
+                        width="133.3%"
+                        height="131.3%"
+                        x="-16.7%"
+                        y="-15.6%"
+                        filterUnits="objectBoundingBox"
+                      >
                         <feGaussianBlur in="SourceGraphic" stdDeviation="0" />
                       </filter>
-                      <filter id="hi-c" width="159.9%" height="145%" x="-29.9%" y="-22.5%" filterUnits="objectBoundingBox">
+                      <filter
+                        id="hi-c"
+                        width="159.9%"
+                        height="145%"
+                        x="-29.9%"
+                        y="-22.5%"
+                        filterUnits="objectBoundingBox"
+                      >
                         <feGaussianBlur in="SourceGraphic" stdDeviation="0" />
                       </filter>
                     </defs>
@@ -60,7 +88,10 @@ export default function Subscribe() {
               </div>
 
               {/* Sparkles */}
-              <div className="absolute top-0 -mt-4 left-1/2 -translate-x-1/2 pointer-events-none -z-10 hidden md:block" aria-hidden="true">
+              <div
+                className="absolute top-0 -mt-4 left-1/2 -translate-x-1/2 pointer-events-none -z-10 hidden md:block"
+                aria-hidden="true"
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" width="1270" height="483">
                   <g fill="#FCD34D" fillRule="nonzero">
                     <path d="M500 13.283A22.888 22.888 0 0 0 511.495.206c.125-.345 2.162 11.236 9.026 13.47 0 0-8.305 3.98-10.272 11.862.008.11-.47-6.26-10.249-12.255ZM547.29 36.768a24 24 0 0 0 12.06-13.76c.13-.36 2.26 11.8 9.5 14.14 0 0-8.71 4.18-10.78 12.45-.03.11-.53-6.57-10.78-12.83ZM373 468.47c5.425.258 10.73-1.707 14.754-5.466.247-.223-3.208 10.084 1.246 14.993l-.344-.01c-1.611-.023-8.525.176-12.907 5.012-.068.072 2.332-5.303-2.749-14.53Z" />
@@ -72,7 +103,7 @@ export default function Subscribe() {
               <div className="py-12 md:py-20 -mx-20 px-20">
                 <div className="max-w-3xl mx-auto text-center">
                   <h1 className="h1 font-hkgrotesk text-slate-100 mb-12">
-                    Subscribe through your favorite
+                    Abonne toi sur ta
                     <span className="font-permanent-marker text-blue-500 font-normal whitespace-nowrap">
                       {' '}
                       <span className="inline-flex relative">
@@ -90,32 +121,60 @@ export default function Subscribe() {
                             opacity=".32"
                           />
                         </svg>{' '}
-                        platform
-                      </span>
-                      <span className="text-slate-100">.</span>
+                        platforme
+                      </span>{' '}
+                      <span className="text-slate-100">favorite !</span>
                     </span>
                   </h1>
                   {/* Buttons */}
                   <div className="-m-1.5 max-w-xl mx-auto mb-8">
-                    <button className="btn text-white bg-blue-500 hover:bg-blue-600 group shadow-sm m-1.5">Apple Podcasts</button>
-                    <button className="btn text-white bg-blue-500 hover:bg-blue-600 group shadow-sm m-1.5">Spotify</button>
-                    <button className="btn text-white bg-blue-500 hover:bg-blue-600 group shadow-sm m-1.5">Google Podcasts</button>
-                    <button className="btn text-white bg-blue-500 hover:bg-blue-600 group shadow-sm m-1.5">Overcast</button>
-                    <button className="btn text-white bg-blue-500 hover:bg-blue-600 group shadow-sm m-1.5">Amazon Music</button>
-                    <button className="btn text-white bg-blue-500 hover:bg-blue-600 group shadow-sm m-1.5">Pocket Casts</button>
-                    <button className="btn text-white bg-blue-500 hover:bg-blue-600 group shadow-sm m-1.5">Castro</button>
+                    <Link
+                      href="https://podcasts.apple.com/us/podcast/du-code-et-du-cash/id1701022126"
+                      className="btn text-white bg-blue-500 hover:bg-blue-600 group shadow-sm m-1.5"
+                    >
+                      <SiApplepodcasts size={16} className="mr-2" />
+                      Apple Podcasts
+                    </Link>
+                    <Link
+                      href="https://podcasters.spotify.com/pod/show/du-code-et-du-cash"
+                      className="btn text-white bg-blue-500 hover:bg-blue-600 group shadow-sm m-1.5"
+                    >
+                      <SiSpotify size={16} className="mr-2" />
+                      Spotify
+                    </Link>
+
+                    <Link
+                      href="https://www.youtube.com/channel/UC5HDIVwuqoIuKKw-WbQ4CvA"
+                      className="btn text-white bg-blue-500 hover:bg-blue-600 group shadow-sm m-1.5"
+                    >
+                      <SiYoutube size={16} className="mr-2" />
+                      YouTube
+                    </Link>
                   </div>
 
                   <SubscribeForm />
 
+                  <div className="max-w-[360px] mx-auto mt-16">
+                    <div className="text-xs text-slate-500 font-medium uppercase italic mb-2">
+                      Rejoins mon discord !
+                    </div>
+
+                    <Link
+                      href="https://discord.gg/CsBtzhmddf"
+                      className="btn text-white bg-blue-500 hover:bg-blue-600 group shadow-sm m-1.5"
+                    >
+                      <SiDiscord size={16} className="mr-2" />
+                      Discord
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      
+
       <Features />
     </>
-  )
+  );
 }

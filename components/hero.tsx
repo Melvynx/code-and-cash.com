@@ -111,8 +111,8 @@ export default function Hero() {
                 data-aos="fade-right"
                 data-aos-delay="200"
               >
-                Je donne la paroles au développeur qui gagne leur vie avec leur
-                projet en ligne afin que toi aussi tu puisses te lancer.
+                Je partage avec les développeurs qui ont transformé leur passion en
+                cash, et je te donne les clés pour faire pareil !
               </p>
               {/* Buttons */}
               <div

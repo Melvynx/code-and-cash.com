@@ -20,7 +20,7 @@ export default function Podcasts() {
           {/* Section header */}
           <div className="md:flex justify-between items-center mb-8">
             <h2 className="text-3xl md:text-4xl font-hkgrotesk font-extrabold mb-4 md:mb-0">
-              Latest Podcasts
+              Dernier podcast
             </h2>
             {/* Filters */}
             <div className="flex flex-wrap -m-1">

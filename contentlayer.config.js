@@ -46,6 +46,9 @@ const Post = defineDocumentType(() => ({
     youtube: {
       type: 'string',
     },
+    numero: {
+      type: 'number',
+    },
   },
   computedFields: {
     slug: {

@@ -1,19 +1,18 @@
-import Header from '@/components/ui/header'
+import Footer from '@/components/ui/footer';
+import Header from '@/components/ui/header';
 
 export default function SubscribeLayout({
   children,
 }: {
-  children: React.ReactNode
-}) {  
+  children: React.ReactNode;
+}) {
   return (
     <>
       <Header nav={false} />
 
-      <main className="grow">
+      <main className="grow">{children}</main>
 
-          {children}
-
-      </main>
+      <Footer />
     </>
-  )
+  );
 }

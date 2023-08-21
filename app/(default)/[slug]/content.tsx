@@ -5,6 +5,12 @@ import AudioContext from '@/app/audio-context';
 import { Mdx } from '@/components/mdx/mdx';
 import PostDate from '@/components/post-date';
 import AudioPlayer from '@/components/ui/audio-player';
+import {
+  SiApplepodcasts,
+  SiSpotify,
+  SiYoutube,
+} from '@icons-pack/react-simple-icons';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
 import Sidebar from './sidebar';
@@ -35,9 +41,8 @@ export default function PostContent({ ...props }: Post) {
                   alt="Podcast image"
                 />
               </div>
-
               {/* Content */}
-              <div className="py-12 md:py-20 -mx-20 px-20">
+              <div className="py-12 flex flex-col lg:flex-row gap-6 lg:gap-8 md:py-20 -mx-20 px-20">
                 <div className="md:flex justify-between items-center text-center md:text-left">
                   {/* Left content */}
                   <div className="max-w-3xl">
@@ -53,9 +58,10 @@ export default function PostContent({ ...props }: Post) {
                     <div className="h-10" />
                     {props.spotify && (
                       <Link
-                        className="btn-sm text-white bg-pink-500 hover:bg-pink-600 group shadow-sm"
+                        className="btn-sm mr-4 text-white bg-pink-500 hover:bg-pink-600 group shadow-sm"
                         href={props.spotify}
                       >
+                        <SiSpotify size={16} className="mr-2" />
                         Spotify
                         <span className="tracking-normal text-pink-200 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
                           -&gt;
@@ -64,9 +70,10 @@ export default function PostContent({ ...props }: Post) {
                     )}
                     {props.apple && (
                       <Link
-                        className="btn-sm text-white bg-pink-500 hover:bg-pink-600 group shadow-sm"
+                        className="btn-sm mr-4 text-white bg-pink-500 hover:bg-pink-600 group shadow-sm"
                         href={props.apple}
                       >
+                        <SiApplepodcasts size={16} className="mr-2" />
                         Apple Podcast
                         <span className="tracking-normal text-pink-200 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
                           -&gt;
@@ -75,9 +82,10 @@ export default function PostContent({ ...props }: Post) {
                     )}
                     {props.youtube && (
                       <Link
-                        className="btn-sm text-white bg-pink-500 hover:bg-pink-600 group shadow-sm"
+                        className="btn-sm mr-4 text-white bg-pink-500 hover:bg-pink-600 group shadow-sm"
                         href={props.youtube}
                       >
+                        <SiYoutube size={16} className="mr-2" />
                         YouTube
                         <span className="tracking-normal text-pink-200 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
                           -&gt;
@@ -85,6 +93,15 @@ export default function PostContent({ ...props }: Post) {
                       </Link>
                     )}
                   </div>
+                </div>
+                <div className=" flex-1 hidden lg:block">
+                  <Image
+                    src={props.image}
+                    width={250}
+                    height={250}
+                    alt="Podcasat cover"
+                    className="rounded-md shadow-md object-cover ml-auto"
+                  />
                 </div>
               </div>
             </div>
