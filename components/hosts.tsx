@@ -1,23 +1,23 @@
-import Promoter from '@/public/images/promoter.jpg';
-import Image from 'next/image';
-import Link from 'next/link';
+import Promoter from "@/public/images/promoter.jpg";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Hosts() {
   return (
     <section>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl px-4 mx-auto sm:px-6">
         <div className="relative">
           {/* Background */}
           <div
-            className="absolute inset-0 bg-slate-900 rounded-3xl -mx-20 -z-10"
+            className="absolute inset-0 -mx-20 bg-slate-900 rounded-3xl -z-10"
             aria-hidden="true"
           >
-            {' '}
+            {" "}
           </div>
 
           {/* Sparkles */}
           <div
-            className="absolute top-0 left-1/2 -translate-x-1/2 mt-14 pointer-events-none -z-10 hidden lg:block"
+            className="absolute top-0 hidden -translate-x-1/2 pointer-events-none left-1/2 mt-14 -z-10 lg:block"
             aria-hidden="true"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width={1270} height={449}>
@@ -29,7 +29,7 @@ export default function Hosts() {
 
           {/* Scratches */}
           <div
-            className="absolute top-full left-1/2 -translate-x-1/2 -mt-4 pointer-events-none -z-10"
+            className="absolute -mt-4 -translate-x-1/2 pointer-events-none top-full left-1/2 -z-10"
             aria-hidden="true"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width={1270} height={93}>
@@ -41,42 +41,44 @@ export default function Hosts() {
             </svg>
           </div>
 
-          <div className="py-12 md:py-20 -mx-20 px-20 overflow-hidden">
-            <div className="lg:flex items-start">
+          <div className="px-20 py-12 -mx-20 overflow-hidden md:py-20">
+            <div className="items-start lg:flex">
               {/* Left content */}
               <div className="flex-1 mb-12 lg:mb-0">
                 <div className="mb-6">
-                  <h2 className="text-3xl md:text-4xl font-hkgrotesk font-extrabold text-slate-100 mb-2">
+                  <h2 className="mb-2 text-3xl font-extrabold md:text-4xl font-hkgrotesk text-slate-100">
                     Rencontre le créateur
                   </h2>
-                  <div className="text-slate-400 space-y-3">
+                  <div className="space-y-3 text-slate-400">
                     <p>
-                      Depuis 2021 je me suis lancé en tant que développeur
-                      indépendant et je partage mon expérience sur mon podcast.
+                      Depuis 2021, je me suis lancé en tant que développeur
+                      indépendant et je partage de mon expérience sur mon
+                      podcast.
                     </p>
                     <p>
-                      Mais je suis jamais seul ! Je profite de partage avec d'autre
-                      personne pour me livrer et écouter les histoires de la
-                      communauté francophone.
+                      Mais je ne suis jamais seul ! Je profite de partager avec
+                      d'autres personnes pour me livrer et écouter les histoires
+                      de la communauté francophone.
                     </p>
                     <p>
-                      En vrai, c'est juste mon kiff de partager ma passion que ce
-                      soit le développement, le marketing et l'entrepreneuriat. C'est
-                      plus un podcast pour moi mais j'ai aussi envie de vous faire
-                      kiffer et vous apprendre des choses.
+                      En vrai, c'est juste mon kiff de partager ma passion, que
+                      ce soit le développement, le marketing ou
+                      l'entrepreneuriat. C'est plus un podcast pour moi, mais
+                      j'ai aussi envie de vous faire kiffer et vous apprendre
+                      des choses.
                     </p>
                   </div>
                 </div>
                 <div className="mb-8">
                   <div className="flex items-center">
                     <Image
-                      className="shrink-0 rounded-full mr-3"
+                      className="mr-3 rounded-full shrink-0"
                       src={Promoter}
                       width={48}
                       height={48}
                       alt="Promoter"
                     />
-                    <div className="font-permanent-marker text-slate-300 text-sm uppercase">
+                    <div className="text-sm uppercase font-permanent-marker text-slate-300">
                       — Melvyn <br />
                       Malherbe
                     </div>
@@ -84,10 +86,10 @@ export default function Hosts() {
                 </div>
                 <div>
                   <Link
-                    className="btn text-white bg-blue-500 hover:bg-blue-600 group shadow-sm"
+                    className="text-white bg-blue-500 shadow-sm btn hover:bg-blue-600 group"
                     href="/subscribe"
                   >
-                    Écouter gratuitement{' '}
+                    Écouter gratuitement{" "}
                     <span className="tracking-normal text-blue-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
                       -&gt;
                     </span>
@@ -107,21 +109,22 @@ export default function Hosts() {
                       alt="Host 01"
                     />
                     <div>
-                      <div className="text-lg font-hkgrotesk font-extrabold text-slate-100">
+                      <div className="text-lg font-extrabold font-hkgrotesk text-slate-100">
                         Melvyn Malherbe
                       </div>
                       <div className="mb-2">
                         <a
-                          className="font-hkgrotesk font-medium text-sm text-blue-500 hover:underline"
+                          className="text-sm font-medium text-blue-500 font-hkgrotesk hover:underline"
                           href="https://twitter.com/melvynxdev"
                         >
                           @melvynxdev
                         </a>
                       </div>
                       <div className="text-slate-400">
-                        Melvyn est le créateur de plusieurs formation sur le
-                        développement web en Français. Il a créer sa propre
-                        plateforme de formation et nombreuse autre application.
+                        Melvyn est le créateur de plusieurs formations sur le
+                        développement web en français. Il a créé sa propre
+                        plateforme de formation et nombreuses autres
+                        applications.
                       </div>
                     </div>
                   </div>

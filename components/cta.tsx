@@ -1,18 +1,22 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Cta() {
   return (
     <section>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl px-4 mx-auto sm:px-6">
         <div className="relative">
           {/* Background */}
           <div
-            className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl -mx-20 -z-10 overflow-hidden"
+            className="absolute inset-0 -mx-20 overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl -z-10"
             aria-hidden="true"
           >
             {/* Illustration */}
-            <div className="absolute -top-16 left-1/2 -translate-x-1/3 md:-translate-x-1/2 pointer-events-none -z-10 blur-2xl">
-              <svg xmlns="http://www.w3.org/2000/svg" width="2106" height="1327">
+            <div className="absolute pointer-events-none -top-16 left-1/2 -translate-x-1/3 md:-translate-x-1/2 -z-10 blur-2xl">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2106"
+                height="1327"
+              >
                 <defs>
                   <filter
                     id="hi-a"
@@ -73,21 +77,21 @@ export default function Cta() {
           </div>
 
           {/* Content */}
-          <div className="py-12 md:py-20 -mx-20 px-20">
-            <div className="md:flex justify-between items-center text-center md:text-left">
+          <div className="px-20 py-12 -mx-20 md:py-20">
+            <div className="items-center justify-between text-center md:flex md:text-left">
               {/* Left content */}
               <div className="md:max-w-[640px]">
                 {/* Copy */}
                 <h2
-                  className="h2 font-hkgrotesk font-extrabold text-slate-100 mb-6"
+                  className="mb-6 font-extrabold h2 font-hkgrotesk text-slate-100"
                   data-aos="fade-right"
                 >
                   Apprends à vivre ta passion en tant que
-                  <span className="font-permanent-marker text-blue-500 font-normal whitespace-nowrap">
-                    {' '}
-                    <span className="inline-flex relative">
+                  <span className="font-normal text-blue-500 font-permanent-marker whitespace-nowrap">
+                    {" "}
+                    <span className="relative inline-flex">
                       <svg
-                        className="absolute right-0 top-full mt-1 max-w-none -z-10"
+                        className="absolute right-0 mt-1 top-full max-w-none -z-10"
                         width="135"
                         height="9"
                         viewBox="0 0 135 9"
@@ -110,9 +114,9 @@ export default function Cta() {
                   data-aos="fade-right"
                   data-aos-delay="100"
                 >
-                  Mon but est de te donner la motivation et les clés pour te lancer.
-                  Même si tu souhaites juste devenir développeur free-lance en
-                  gagnant mieux ta vie, tu es au bonne endroit.
+                  Mon but est de te donner la motivation et les clés pour te
+                  lancer. Même si tu souhaites juste devenir développeur
+                  free-lance en gagnant mieux ta vie, tu es au bon endroit.
                 </p>
               </div>
 
@@ -123,7 +127,7 @@ export default function Cta() {
                 data-aos-duration="900"
               >
                 <Link
-                  className="btn text-white bg-blue-500 hover:bg-blue-600 group shadow-sm"
+                  className="text-white bg-blue-500 shadow-sm btn hover:bg-blue-600 group"
                   href="/subscribe"
                 >
                   Écouter
