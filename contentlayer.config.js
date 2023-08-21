@@ -21,10 +21,6 @@ const Post = defineDocumentType(() => ({
       type: 'string',
       required: true,
     },
-    audio: {
-      type: 'string',
-      required: true,
-    },
     episode: {
       type: 'string',
       required: true,
@@ -32,6 +28,9 @@ const Post = defineDocumentType(() => ({
     category: {
       type: 'string',
       required: true,
+    },
+    embedId: {
+      type: 'string',
     },
     summary: {
       type: 'string',

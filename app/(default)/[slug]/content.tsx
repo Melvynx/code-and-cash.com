@@ -4,7 +4,6 @@ import { Post } from '@/.contentlayer/generated';
 import AudioContext from '@/app/audio-context';
 import { Mdx } from '@/components/mdx/mdx';
 import PostDate from '@/components/post-date';
-import AudioPlayer from '@/components/ui/audio-player';
 import {
   SiApplepodcasts,
   SiSpotify,
@@ -54,7 +53,13 @@ export default function PostContent({ ...props }: Post) {
                       {props.category} · <PostDate dateString={props.publishedAt} />{' '}
                       · Episode {props.episode}
                     </div>
-                    <AudioPlayer ref={audio} src={props.audio} />
+                    <iframe
+                      src={`https://podcasters.spotify.com/pod/show/du-code-et-du-cash/embed/episodes/${props.embedId}`}
+                      height="102px"
+                      width="400px"
+                      frameBorder="0"
+                      scrolling="no"
+                    ></iframe>
                     <div className="h-10" />
                     {props.spotify && (
                       <Link
