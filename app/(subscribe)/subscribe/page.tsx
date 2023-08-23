@@ -5,12 +5,14 @@ export const metadata = {
 
 import Features from '@/components/features';
 import {
+  SiAmazon,
   SiApplepodcasts,
   SiDiscord,
   SiSpotify,
   SiYoutube,
 } from '@icons-pack/react-simple-icons';
 import Link from 'next/link';
+import FluxRss from './flux-rss';
 import SubscribeForm from './subscribe-form';
 
 export default function Subscribe() {
@@ -150,11 +152,18 @@ export default function Subscribe() {
                       <SiYoutube size={16} className="mr-2" />
                       YouTube
                     </Link>
+                    <Link
+                      href="https://music.amazon.fr/podcasts/2a68cbc8-1412-4a74-8e0f-9412c5bf5f1d/du-code-et-du-cash"
+                      className="btn text-white bg-blue-500 hover:bg-blue-600 group shadow-sm m-1.5"
+                    >
+                      <SiAmazon size={16} className="mr-2" />
+                      Amazon
+                    </Link>
                   </div>
 
                   <SubscribeForm />
 
-                  <div className="max-w-[360px] mx-auto mt-16">
+                  <div className="max-w-[360px] mx-auto my-16">
                     <div className="text-xs text-slate-500 font-medium uppercase italic mb-2">
                       Rejoins mon discord !
                     </div>
@@ -167,6 +176,7 @@ export default function Subscribe() {
                       Discord
                     </Link>
                   </div>
+                  <FluxRss />
                 </div>
               </div>
             </div>
