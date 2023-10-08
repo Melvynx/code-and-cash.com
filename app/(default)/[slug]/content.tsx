@@ -55,6 +55,7 @@ export default function PostContent({ ...props }: Post) {
                     </div>
                     <iframe
                       src={`https://podcasters.spotify.com/pod/show/du-code-et-du-cash/embed/episodes/${props.embedId}`}
+                      
                       height="102px"
                       width="400px"
                       frameBorder="0"
