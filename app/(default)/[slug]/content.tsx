@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import { Post } from '@/.contentlayer/generated';
-import AudioContext from '@/app/audio-context';
-import { Mdx } from '@/components/mdx/mdx';
-import PostDate from '@/components/post-date';
+import { Post } from "@/.contentlayer/generated";
+import AudioContext from "@/app/audio-context";
+import { Mdx } from "@/components/mdx/mdx";
+import PostDate from "@/components/post-date";
 import {
   SiApplepodcasts,
   SiSpotify,
   SiYoutube,
-} from '@icons-pack/react-simple-icons';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useRef } from 'react';
-import Sidebar from './sidebar';
+} from "@icons-pack/react-simple-icons";
+import Image from "next/image";
+import Link from "next/link";
+import { useRef } from "react";
+import Sidebar from "./sidebar";
 
 export default function PostContent({ ...props }: Post) {
   const audio = useRef<any>(null);
@@ -50,22 +50,22 @@ export default function PostContent({ ...props }: Post) {
                       {props.title}
                     </h1>
                     <div className="font-hkgrotesk text-white font-medium opacity-80 mb-8">
-                      {props.category} · <PostDate dateString={props.publishedAt} />{' '}
-                      · Episode {props.episode}
+                      {props.category} ·{" "}
+                      <PostDate dateString={props.publishedAt} /> · Episode{" "}
+                      {props.numero}
                     </div>
                     <iframe
-                      src={`https://podcasters.spotify.com/pod/show/du-code-et-du-cash/embed/episodes/${props.embedId}`}
-                      
+                      src={`https://podcasters.spotify.com/pod/show/du-code-et-du-cash/embed/episodes/XXXX-${props.spotifyId}`}
                       height="102px"
                       width="400px"
                       frameBorder="0"
                       scrolling="no"
                     ></iframe>
                     <div className="h-10" />
-                    {props.spotify && (
+                    {props.spotifyId && (
                       <Link
                         className="btn-sm mr-4 text-white bg-pink-500 hover:bg-pink-600 group shadow-sm"
-                        href={props.spotify}
+                        href={`https://podcasters.spotify.com/pod/show/du-code-et-du-cash/episodes/XXX-${props.spotifyId}`}
                       >
                         <SiSpotify size={16} className="mr-2" />
                         Spotify
@@ -102,7 +102,7 @@ export default function PostContent({ ...props }: Post) {
                 </div>
                 <div className=" flex-1 hidden lg:block">
                   <Image
-                    src={props.image}
+                    src={`/podcast/${props.numero}.png`}
                     width={250}
                     height={250}
                     alt="Podcasat cover"

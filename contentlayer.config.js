@@ -13,15 +13,7 @@ const Post = defineDocumentType(() => ({
       type: 'date',
       required: true,
     },
-    image: {
-      type: 'string',
-      required: true,
-    },
     bg: {
-      type: 'string',
-      required: true,
-    },
-    episode: {
       type: 'string',
       required: true,
     },
@@ -29,15 +21,12 @@ const Post = defineDocumentType(() => ({
       type: 'string',
       required: true,
     },
-    embedId: {
+    spotifyId: {
       type: 'string',
     },
     summary: {
       type: 'string',
       required: true,
-    },
-    spotify: {
-      type: 'string',
     },
     apple: {
       type: 'string',
