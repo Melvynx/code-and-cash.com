@@ -1,17 +1,19 @@
-'use client';
+"use client";
 
-import { allPosts } from 'contentlayer/generated';
-import { useSearchParams } from 'next/navigation';
-import { CategoryButton } from './podcast/CategoryButton';
-import PostItem from './post-item';
+import { allPosts } from "contentlayer/generated";
+import { useSearchParams } from "next/navigation";
+import { CategoryButton } from "./podcast/CategoryButton";
+import PostItem from "./post-item";
 
 export default function Podcasts() {
   const searchParams = useSearchParams();
-  const category = searchParams.get('category') || 'All';
+  const category = searchParams.get("category") || "All";
 
-  allPosts.sort((a, b) => {
-    return new Date(a.publishedAt) > new Date(b.publishedAt) ? -1 : 1;
-  });
+  const allPostsFilter = allPosts
+    .filter((a) => !a.draft)
+    .toSorted((a, b) => {
+      return new Date(a.publishedAt) > new Date(b.publishedAt) ? -1 : 1;
+    });
 
   return (
     <section>
@@ -34,7 +36,7 @@ export default function Podcasts() {
 
           {/* Podcasts */}
           <div>
-            {allPosts.map((post, postIndex) => (
+            {allPostsFilter.map((post, postIndex) => (
               <PostItem key={postIndex} selectedCategory={category} {...post} />
             ))}
           </div>
