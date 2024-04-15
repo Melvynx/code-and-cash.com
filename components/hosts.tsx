@@ -115,7 +115,7 @@ export default function Hosts() {
                       <div className="mb-2">
                         <a
                           className="text-sm font-medium text-blue-500 font-hkgrotesk hover:underline"
-                          href="https://twitter.com/melvynxdev"
+                          href="https://mlv.sh/twitter"
                         >
                           @melvynxdev
                         </a>

@@ -1,6 +1,6 @@
-import Logo from '@/public/images/logo.png';
-import Image from 'next/image';
-import Link from 'next/link';
+import Logo from "@/public/images/logo.png";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -20,7 +20,9 @@ export default function Footer() {
                 </Link>
                 <div className="text-sm text-slate-500 ml-4">
                   Copyright © Melvynx
-                  <span className="md:hidden lg:inline">. All rights reserved.</span>
+                  <span className="md:hidden lg:inline">
+                    . All rights reserved.
+                  </span>
                 </div>
               </div>
             </div>
@@ -29,7 +31,7 @@ export default function Footer() {
               <li>
                 <a
                   className="flex justify-center items-center text-blue-500 hover:text-blue-600 transition duration-150 ease-in-out"
-                  href="https://twitter.com/melvynxdev"
+                  href="https://mlv.sh/twitter"
                   aria-label="Twitter"
                 >
                   <svg

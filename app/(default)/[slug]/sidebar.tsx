@@ -1,5 +1,5 @@
-import Promoter from '@/public/images/promoter.jpg';
-import Image from 'next/image';
+import Promoter from "@/public/images/promoter.jpg";
+import Image from "next/image";
 
 export default function Sidebar() {
   return (
@@ -16,7 +16,9 @@ export default function Sidebar() {
             />
           </svg>
         </div>
-        <h4 className="font-hkgrotesk font-extrabold text-slate-800 mb-4">Hosts</h4>
+        <h4 className="font-hkgrotesk font-extrabold text-slate-800 mb-4">
+          Hosts
+        </h4>
         <ul className="space-y-3">
           <li className="flex items-center">
             <Image
@@ -33,7 +35,7 @@ export default function Sidebar() {
               <div>
                 <a
                   className="block font-hkgrotesk font-medium text-blue-500 text-xs hover:underline"
-                  href="https://twitter.com/melvynxdev"
+                  href="https://mlv.sh/twitter"
                 >
                   @melvynxdev
                 </a>
