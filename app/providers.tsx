@@ -1,13 +1,16 @@
-'use client';
+"use client";
 
-import { PropsWithChildren } from 'react';
-import { Toaster } from 'sonner';
+import PlausibleProvider from "next-plausible";
+import { PropsWithChildren } from "react";
+import { Toaster } from "sonner";
 
 export const Providers = ({ children }: PropsWithChildren) => {
   return (
     <>
-      <Toaster toastOptions={{}} richColors />
-      {children}
+      <PlausibleProvider domain="code-et-cash.com">
+        <Toaster toastOptions={{}} richColors />
+        {children}
+      </PlausibleProvider>
     </>
   );
 };
