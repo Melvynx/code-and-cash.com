@@ -14,4 +14,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withPlausibleProxy(withContentlayer(nextConfig));
+module.exports = withContentlayer(withPlausibleProxy(nextConfig));
