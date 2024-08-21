@@ -100,6 +100,7 @@ export default async function OgImage({
             src={`${getServerUrl()}/podcast/${post.numero}.png`}
             width={400}
             height={400}
+            tw="rounded-lg shadow-lg"
           />
         </div>
       </div>
