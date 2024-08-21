@@ -4,6 +4,7 @@ import { allPosts } from "contentlayer/generated";
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 
 const PostContent = dynamic(() => import("./content"), {
   ssr: false,
@@ -45,11 +46,13 @@ export default async function SinglePost({
 
   return (
     <>
-      <PostContent {...post} />
-      {/* <Carousel /> */}
-      <Podcasts />
-      <div className="pb-12 md:pb-20" aria-hidden="true"></div>
-      <Cta />
+      <Suspense>
+        <PostContent {...post} />
+        {/* <Carousel /> */}
+        <Podcasts />
+        <div className="pb-12 md:pb-20" aria-hidden="true"></div>
+        <Cta />
+      </Suspense>
     </>
   );
 }
