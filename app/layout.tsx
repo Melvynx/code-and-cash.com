@@ -35,6 +35,7 @@ const hkgrotesk = localFont({
 export const metadata = {
   title: "Code & Cash - Podcast",
   description: "Les développeurs aussi peuvent faire du cash.",
+  metadataBase: new URL("https://code-et-cash.com"),
 };
 
 export default function RootLayout({

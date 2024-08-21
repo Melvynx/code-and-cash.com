@@ -1,12 +1,11 @@
-import Cta from '@/components/cta';
-import Podcasts from '@/components/podcasts';
-import { allPosts } from 'contentlayer/generated';
-import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
-import { notFound } from 'next/navigation';
-// By using next/dynamic, the component is loaded asynchronously after the page has loaded.
-// That way, event handlers like onloadedmetadata are available after the component has fully loaded.
-const PostContent = dynamic(() => import('./content'), {
+import Cta from "@/components/cta";
+import Podcasts from "@/components/podcasts";
+import { allPosts } from "contentlayer/generated";
+import type { Metadata } from "next";
+import dynamic from "next/dynamic";
+import { notFound } from "next/navigation";
+
+const PostContent = dynamic(() => import("./content"), {
   ssr: false,
 });
 
